@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta charset="UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta htp-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta property="og:type" content="website">
+
+    <!-- 박스 내용 개발 -->
+    <meta property="og:title" content="8cb51dc82e8f 님의 정부24 신분증">
+    <meta property="og:title" content="29be5bf7dbed7 님의 정부24 신분증">
+    <meta property="og:image" content="mobile_icon.ico">
+    <meta property="og:site_name" content="정부24">
+
+    <link rel="apple-touch-icon" href="mobile_icon.ico" />
+    <link rel="shortcut icon" href="mobile_icon.ico" />
+    <link rel="stylesheet" href="junglesystem.css">
+    <link rel="stylesheet" href="font_SJSejongGothic.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <title>정부24</title>
+</head>
+
+
+
+<body>
+    <script>
+        function showLoadingScreen() {
+            const loadingScreen = document.createElement('div');
+            loadingScreen.style.position = 'fixed';
+            loadingScreen.style.top = '0';
+            loadingScreen.style.left = '0';
+            loadingScreen.style.width = '100%';
+            loadingScreen.style.height = '100%';
+            loadingScreen.style.backgroundColor = 'white';
+            loadingScreen.style.display = 'flex';
+            loadingScreen.style.justifyContent = 'center';
+            loadingScreen.style.alignItems = 'center';
+            loadingScreen.style.zIndex = '9999';
+
+            const loadingImage = document.createElement('img');
+            loadingImage.src = 'mobile_icon.png';
+            loadingImage.style.width = '100px';
+
+            loadingScreen.appendChild(loadingImage);
+            document.body.appendChild(loadingScreen);
+
+            setTimeout(function () {
+                const loadingScreen = document.querySelector('div');
+                loadingScreen.style.display = 'none';
+
+                document.body.style.overflow = 'auto';
+            }, 2000);
+        }
+
+        showLoadingScreen();
+
+        document.body.style.overflow = 'hidden';
+    </script>
+
+
+    <div class="header">
+        <div onclick="return showAlert()" class="header_triangle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path
+                    d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+            </svg>
+        </div><h1>
+            정부24
+        </h1>
+
+        <img src="icon.png" class="header_img">
+        <h2>
+            주민등록증 모바일 확인서비스
+        </h2>
+        <div class="header_list">
+            <bd>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </bd>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="sidebar_list">
+            <a href="#" id="closeSidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </a>
+            <li class="no-border"><a></a></li>
+            <li class="no-border"><a></a></li>
+            <li id="error1"><a href="#">이용 내역</a></li>
+            <li id="error2"><a href="#">고객 센터</a></li>
+            <li id="error3"><a href="#">인증 수단 설정</a></li>
+            <li id="error4"><a href="#">서비스 해지</a></li>
+            <li id="error5"><a href="#">창닫기</a></li>
+
+        </ul>
+    </div>
+
+
+
+
+
+    <hr color="#ddeaf3">
+    <div id="wrap" class>
+        <div id="box" class="box_main">
+            <img src="8cb51dc82e8f.jpg">
+            <br>
+            <br>
+
+
+
+
+            <!-- 박스 내용 개발 -->
+            <h1>
+                김주용
+            </h1>
+            <h2 style="margin-left: 27px;">
+                97.06.01
+            </h2>
+            <h3>
+                서울특별시 양천구
+            </h3>
+            <div class="QR_Code">
+                <img id="QR_img"
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=IDM3aSeEY5EhFP4sDbWiM%3D2BBi1XA8vXmAQBKHgHhFP4sDbWiM%3D">
+            </div>
+
+
+
+
+
+
+            <progress value="0" max="30" id="jb"></progress>
+
+            <p class="progressbar_text">남은시간</p>
+            <p class="progressbar_time"></p>
+
+            <p class="QR_text">QR코드를 리더기에 스캔하세요</p>
+
+            <div class="box_footer">
+                <p class="js-click-modal">상세정보 표시</p>
+            </div>
+        </div>
+
+        <div class="modal" style="display: none;">
+            <div id="box">
+
+
+
+
+
+                <!-- 박스 내용 개발 -->
+                <img src="8cb51dc82e8f.jpg">
+
+                <h1>
+                    김주용
+                </h1>
+                <h2>
+                    970601-1050218
+                </h2>
+                <h3>
+                    서울특별시 양천구 오목로 300, 202동 701호 (목동, 현대하이페리온)
+                </h3>
+
+                <h4 style="margin-left: 42%">
+                    2021.10.18
+                </h4>
+                <h5>
+                    서울특별시 양천구청장
+                </h5>
+
+
+
+
+            </div>
+
+            <div class="back" style="align-items:center; display: flex; justify-content:center;">
+                <bd><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg></bd>
+            </div>
+        </div>
+
+        <div id="footer">
+            <MARQUEE>
+                <p>캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지
+                    시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이 작동 중입니다. 캡쳐방지 시스템이
+                    작동 중입니다.</p>
+            </MARQUEE>
+        </div>
+    </div>
+    </div>
+</body>
+</body>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+</html>
